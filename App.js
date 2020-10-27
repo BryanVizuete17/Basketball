@@ -59,7 +59,7 @@ function ConsultaStackScreen(){
       <TabHome.Screen
       name= "TiempoRealScreen"
       component={TiempoRealScreem}
-      options={{ tabBarLabel:"TiempoReal",
+      options={{ tabBarLabel:"Tiempo Real",
                   tabBarIcon:()=>(
                     <Icon
                     name='dribbble-with-circle'
