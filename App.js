@@ -15,7 +15,7 @@ const Stack = createStackNavigator();
 function ConsultaStackScreen(){
   return(
     <Stack.Navigator initialRouteName="ListaItemConsulta">
-      <Stack.Screen name="ConsultaScreen" component={Consulta}/>
+      <Stack.Screen name="PARTIDO" component={Consulta}/>
     </Stack.Navigator>
   );
 }
@@ -23,7 +23,7 @@ function ConsultaStackScreen(){
   function TiempoRealScreem(){
     return(
       <Stack.Navigator initialRouteName="ListaItemTiempoRealScreen">
-      <Stack.Screen name="TiempoRealScreen" component={TiempoR}/> 
+      <Stack.Screen name="PARTIDO EN TIEMPO REAL" component={TiempoR}/> 
       </Stack.Navigator>
     
       )
@@ -37,7 +37,7 @@ function ConsultaStackScreen(){
         tabBarOptions={{
            activeTintColor: "black",
            labelStyle: {
-           fontSize: 12,
+           fontSize: 15,
            fontWeight:'bold',
         },
       }}
@@ -48,8 +48,8 @@ function ConsultaStackScreen(){
         options={{ tabBarLabel: "Consulta",
                     tabBarIcon:()=>(
                       <Icon
-                          name='user'
-                          size={28}
+                          name='dribbble'
+                          size={35}
                           color="green"/>
                     ),
 
@@ -62,8 +62,8 @@ function ConsultaStackScreen(){
       options={{ tabBarLabel:"TiempoReal",
                   tabBarIcon:()=>(
                     <Icon
-                    name='user'
-                    size={28}
+                    name='dribbble-with-circle'
+                    size={35}
                     color="green"/>
                   ),
       }}
