@@ -6,9 +6,23 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Input, Button} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Avatar } from 'react-native-elements';
+import {cargarConfiguracion} from "../../utils/conexion";
+import {consultarResultado} from "./servicios/Consultas";
+
 
 
 export class Consulta extends Component{
+
+    constructor(){
+        this.state={
+            puntosA:"0",
+            puntosB:"0",
+
+        }
+    }
+    pintarResultado=(resultado)=>{
+        this.setState({puntosA:resultado.equipoA, puntosB:resultado.equipoB})
+    }
     render(){
         return<View style={estilos.principal}>
             
@@ -32,7 +46,10 @@ export class Consulta extends Component{
                         </View>
                     </View>
                     <View style={estilos.contenedor6}>
-                        <Text style={estilos.Puntuacion}>111</Text>
+    <Text style={estilos.Puntuacion}>{
+        this.state.puntosA
+        
+    }</Text>
                     </View>
               </View>
               <View style={estilos.contenedor4}>
@@ -52,7 +69,11 @@ export class Consulta extends Component{
                 </View>
              
                 <View style={estilos.contenedor8}>
-                <Text style={estilos.Puntuacion}>123</Text>
+                <Text style={estilos.Puntuacion}>
+                    {
+                        this.state.puntosB
+                    }
+                </Text>
                 </View>
                
               </View>
@@ -61,7 +82,7 @@ export class Consulta extends Component{
                 <Button 
                 
                 onPress={()=>{
-
+                    consultarResultado("20201027","20","30");
                 }}
                 icon={
                     <Icon
